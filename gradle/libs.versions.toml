@@ -1,6 +1,6 @@
 [versions]
 
-kotlin = "2.0.10"
+kotlin = "2.1.20"
 kotlinx-coroutines = "1.10.1"
 compose-plugin = "1.7.3"
 mosaic = "0.16.0"

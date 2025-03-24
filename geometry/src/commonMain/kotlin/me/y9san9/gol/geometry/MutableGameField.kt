@@ -33,11 +33,11 @@ private class MutableGameFieldImpl<T> : MutableGameField<T> {
     this.map.remove(coordinate)
   }
 
-  override fun equals(any: Any?): Boolean {
-    if (any === this) return true
-    if (any !is MutableGameField<*>) return false
-    if (coordinates != any.coordinates) return false
-    return coordinates.all { coordinate -> any[coordinate] == this[coordinate] }
+  override fun equals(other: Any?): Boolean {
+    if (other === this) return true
+    if (other !is MutableGameField<*>) return false
+    if (coordinates != other.coordinates) return false
+    return coordinates.all { coordinate -> other[coordinate] == this[coordinate] }
   }
 
   override fun hashCode(): Int {

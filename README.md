@@ -38,7 +38,12 @@ fun GameOfLifeContent(
 }
 ```
 
-## Running (zero dependencies required)
+## Running (with Java)
+
+> [!WARNING]
+> Do not run the following commands inside Intellij Idea since its terminal
+> lacks some of the important features required by this program. Use builtin
+> terminals for Unix systems and PowerShell for Windows.
 
 First, **clone this repo** and CD into it. Then copy-paste a command depending
 on your system:
@@ -46,16 +51,22 @@ on your system:
 ### Unix
 
 ```shell
-./gradlew mosaic:installDist &&
+./gradlew mosaic:installDist
 ./mosaic/build/install/mosaic/bin/mosaic
 ```
 
 ### Windows
 
 ```shell
-gradlew.bat mosaic:installDist &&
-mosaic/build/install/mosaic/bin/mosaic.bat
+./gradlew.bat mosaic:installDist
+./mosaic/build/install/mosaic/bin/mosaic.bat
 ```
+
+## Running (Native)
+
+This project is already configured to support Kotlin/Native, but I don't have
+time at the moment to provide docs on how to configure its build and run. So,
+contributions are welcome.
 
 ## Mosaic
 
