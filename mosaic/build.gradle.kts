@@ -30,7 +30,7 @@ kotlin {
   configure(nativeTargets) {
     binaries {
       executable {
-        entryPoint = "me.y9san9.gol.mosaic"
+        entryPoint = "me.y9san9.gol.mosaic.main"
       }
     }
   }

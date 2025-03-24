@@ -5,20 +5,22 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
-import com.jakewharton.mosaic.runMosaic
+import com.jakewharton.mosaic.runMosaicBlocking
 import kotlinx.coroutines.delay
 
-suspend fun main() = runMosaic {
-  val config = remember { MosaicGameOfLife() }
-  var game by remember { mutableStateOf(config.seed) }
+fun main() {
+  runMosaicBlocking {
+    val config = remember { MosaicGameOfLife() }
+    var game by remember { mutableStateOf(config.seed) }
 
-  LaunchedEffect(Unit) {
-    val tickDelay = 1_000L / config.tps
-    while (true) {
-      game = game.tick()
-      delay(tickDelay)
+    LaunchedEffect(Unit) {
+      val tickDelay = 1_000L / config.tps
+      while (true) {
+        game = game.tick()
+        delay(tickDelay)
+      }
     }
-  }
 
-  GameOfLifeContent(config, game)
+    GameOfLifeContent(config, game)
+  }
 }
