@@ -51,15 +51,15 @@ on your system:
 ### Unix
 
 ```shell
-./gradlew mosaic:installDist
-./mosaic/build/install/mosaic/bin/mosaic
+./gradlew mosaic:installJvmDist
+./mosaic/build/install/mosaic-jvm/bin/mosaic
 ```
 
 ### Windows
 
 ```shell
-./gradlew.bat mosaic:installDist
-./mosaic/build/install/mosaic/bin/mosaic.bat
+./gradlew.bat mosaic:installJvmDist
+./mosaic/build/install/mosaic-jvm/bin/mosaic.bat
 ```
 
 ## Running (Native)

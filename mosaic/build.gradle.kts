@@ -31,7 +31,6 @@ kotlin {
     binaries {
       executable {
         entryPoint = "me.y9san9.gol.mosaic"
-        println(outputFile.absolutePath)
       }
     }
   }
