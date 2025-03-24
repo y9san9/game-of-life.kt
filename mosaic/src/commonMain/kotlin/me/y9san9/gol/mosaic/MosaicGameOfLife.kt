@@ -6,8 +6,8 @@ import me.y9san9.gol.geometry.buildGameField
 import me.y9san9.gol.geometry.set
 
 data class MosaicGameOfLife(
-  val aliveChar: Char = '█',
-  val deadChar: Char = ' ',
+  val aliveString: String = "██",
+  val deadString: String = "  ",
   val tps: Int = 10,
   val seed: GameOfLife = GameOfLife(
     buildGameField {

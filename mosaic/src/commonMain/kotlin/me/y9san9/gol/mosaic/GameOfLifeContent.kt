@@ -15,17 +15,19 @@ fun GameOfLifeContent(
 ) {
   val (width, height) = LocalTerminal.current.size
 
+  val widthCoerced = width / 2
+
   Column {
     repeat(height) { column ->
       Row {
-        repeat(width) { row ->
+        repeat(widthCoerced) { row ->
           val centeredCoordinate = Coordinate(
-            x = row - width / 2,
+            x = row - widthCoerced / 2,
             y = column - height / 2,
           )
           val isAlive = game.isAlive(centeredCoordinate)
-          val char = if (isAlive) config.aliveChar else config.deadChar
-          Text("$char")
+          val string = if (isAlive) config.aliveString else config.deadString
+          Text(string)
         }
       }
     }
